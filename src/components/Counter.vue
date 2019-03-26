@@ -1,14 +1,14 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1> My favorite number is {{ count }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "Counter",
   props: {
-    msg: String
+    count: Number
   }
 };
 </script>
