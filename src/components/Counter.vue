@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
     <h1> My favorite number is {{ count }}</h1>
+    <h2>Local counter {{localCounter}}</h2>
+     <button v-on:click="increment">Incement</button>
   </div>
 </template>
 
@@ -8,7 +10,16 @@
 export default {
   name: "Counter",
   props: {
-    count: Number
+    count: String
+  },
+  data: () => ({
+    localCounter: 20
+  }),
+
+  methods: {
+    increment: function() {
+      this.localCounter += 1;
+    }
   }
 };
 </script>
